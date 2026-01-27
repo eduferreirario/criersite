@@ -178,3 +178,14 @@ textarea{min-height:120px;resize:vertical}
   .menu{display:none}
   .actions{gap:8px}
 }
+/* Vídeos do portfólio */
+.portfolio-video {
+  width: 100%;
+  max-width: 360px;   /* controla a largura */
+  max-height: 640px;  /* controla a altura */
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
