@@ -192,19 +192,21 @@ textarea{min-height:120px;resize:vertical}
 }
 
 /* Mesmo tamanho para Instagram e vídeo */
+/* Mesmo tamanho para Instagram e vídeo (9:16 responsivo) */
 .media-wrap{
   width: 100%;
   max-width: 360px;
-  height: 640px;            /* força altura igual (9:16) */
+  aspect-ratio: 9 / 16;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
   background: #000;
-  display: block;
 }
 
+
 .media-wrap iframe,
-.media-wrap video{
+.media-wrap video,
+.media-wrap img{
   width: 100%;
   height: 100%;
   border: 0;
@@ -212,7 +214,21 @@ textarea{min-height:120px;resize:vertical}
   object-fit: cover;
 }
 
+
 /* Força o Instagram ocupar o box */
 .ig-embed{
-  min-height: 640px;
+  min-height: 100%;
+}
+/* ===== GRID DO PORTFÓLIO (RESPONSIVA) ===== */
+.portfolio-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 900px){
+  .portfolio-grid{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 }
