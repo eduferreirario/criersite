@@ -191,14 +191,16 @@ textarea{min-height:120px;resize:vertical}
   align-items: stretch;
 }
 
-/* MÍDIA 9:16 — RESPONSIVA (CORRETA) */
+/* ===== MÍDIA 9:16 (VÍDEO / IMG / INSTAGRAM) ===== */
 .media-wrap{
   width: 100%;
+  max-width: 360px;
   aspect-ratio: 9 / 16;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
   background: #000;
+  position: relative;   /* ESSENCIAL */
 }
 
 .media-wrap iframe,
@@ -206,22 +208,18 @@ textarea{min-height:120px;resize:vertical}
 .media-wrap img{
   width: 100%;
   height: 100%;
+  min-height: 100%;     /* ESSENCIAL */
   border: 0;
   display: block;
   object-fit: cover;
 }
 
-/* Garante que embed do Instagram ocupe tudo */
+/* Instagram embed ocupando o box */
 .ig-embed{
+  width: 100%;
   height: 100%;
 }
 
-
-
-/* Força o Instagram ocupar o box */
-.ig-embed{
-  min-height: 100%;
-}
 /* ===== GRID DO PORTFÓLIO (RESPONSIVA) ===== */
 .portfolio-grid{
   display: grid;
