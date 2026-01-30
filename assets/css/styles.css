@@ -191,18 +191,15 @@ textarea{min-height:120px;resize:vertical}
   align-items: stretch;
 }
 
-/* Mesmo tamanho para Instagram e vídeo */
-/* Mesmo tamanho para Instagram e vídeo (9:16 responsivo) */
+/* MÍDIA 9:16 — RESPONSIVA (CORRETA) */
 .media-wrap{
   width: 100%;
-  max-width: 360px;
   aspect-ratio: 9 / 16;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
   background: #000;
 }
-
 
 .media-wrap iframe,
 .media-wrap video,
@@ -213,6 +210,12 @@ textarea{min-height:120px;resize:vertical}
   display: block;
   object-fit: cover;
 }
+
+/* Garante que embed do Instagram ocupe tudo */
+.ig-embed{
+  height: 100%;
+}
+
 
 
 /* Força o Instagram ocupar o box */
