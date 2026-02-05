@@ -503,3 +503,44 @@ video,
 @media (max-width: 980px){
   .portfolio-grid{ grid-template-columns: 1fr; }
 }
+/* ===== PORTFÓLIO ===== */
+
+.portfolio-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.portfolio-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media-wrap{
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+}
+
+.media-wrap img,
+.media-wrap video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.meta{
+  opacity: .9;
+  line-height: 1.35;
+}
+
+@media (max-width: 980px){
+  .portfolio-grid{
+    grid-template-columns: 1fr;
+  }
+}
