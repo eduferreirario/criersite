@@ -22,6 +22,7 @@ body{
 a{color:inherit;text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 18px}
 
+/* ===== HEADER / NAV ===== */
 .header{
   position:sticky;top:0;z-index:10;
   backdrop-filter: blur(10px);
@@ -37,9 +38,7 @@ a{color:inherit;text-decoration:none}
 }
 .brand img{height:34px;width:auto}
 .brand .name{font-weight:800;letter-spacing:.8px}
-.menu{
-  display:flex;gap:16px;align-items:center;
-}
+.menu{display:flex;gap:16px;align-items:center}
 .menu a{
   color:var(--muted);
   padding:10px 10px;border-radius:12px;
@@ -47,6 +46,8 @@ a{color:inherit;text-decoration:none}
 .menu a:hover{color:var(--text); background: rgba(148,163,184,.08)}
 .menu a.active{color:var(--text); background: rgba(20,184,166,.14); border:1px solid rgba(20,184,166,.18)}
 .actions{display:flex;gap:10px;align-items:center}
+
+/* ===== BUTTONS ===== */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:10px 14px;border-radius:14px;
@@ -62,7 +63,9 @@ a{color:inherit;text-decoration:none}
   color:#062321;
 }
 .btn--ghost{ background: transparent; }
+.btn.ghost{ background: transparent; }
 
+/* ===== HERO ===== */
 .hero{padding:44px 0 26px}
 .hero-grid{
   display:grid;
@@ -108,10 +111,13 @@ a{color:inherit;text-decoration:none}
   background: rgba(2,6,23,.25);
   font-weight:700;
 }
+
+/* ===== SECTIONS ===== */
 .section{padding:34px 0}
 .section h2{margin:0 0 10px;font-size:26px}
 .section p{margin:0 0 16px;color:#cbd5e1}
 
+/* ===== GENERIC GRIDS / CARDS ===== */
 .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
 .card{
   border:1px solid var(--line);
@@ -124,6 +130,7 @@ a{color:inherit;text-decoration:none}
 .card p{margin:0;color:#cbd5e1}
 .card .meta{margin-top:12px;color:var(--muted);font-weight:700}
 
+/* ===== SPLIT / FIGURE / LIST ===== */
 .split{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start}
 .list{margin:0;padding-left:18px;color:#cbd5e1}
 .list li{margin:8px 0}
@@ -135,6 +142,7 @@ a{color:inherit;text-decoration:none}
 }
 .figure img{width:100%;height:auto;display:block}
 
+/* ===== PRICING ===== */
 .pricing{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
 .price{
   padding:20px;
@@ -154,9 +162,7 @@ a{color:inherit;text-decoration:none}
   background: linear-gradient(180deg, rgba(20,184,166,.14), rgba(15,23,42,.62));
 }
 
-.footer{border-top:1px solid var(--line); padding:20px 0 34px; color:var(--muted)}
-.footer .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
-.small{font-size:13px;color:var(--muted)}
+/* ===== FORMS ===== */
 .form{display:grid;gap:10px}
 .input, textarea{
   width:100%;
@@ -169,6 +175,12 @@ a{color:inherit;text-decoration:none}
 textarea{min-height:120px;resize:vertical}
 .helper{color:var(--muted); font-size:13px}
 
+/* ===== FOOTER (original) ===== */
+.footer{border-top:1px solid var(--line); padding:20px 0 34px; color:var(--muted)}
+.footer .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.small{font-size:13px;color:var(--muted)}
+
+/* ===== HEADER MOBILE ===== */
 @media (max-width: 900px){
   .hero-grid{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
@@ -177,64 +189,6 @@ textarea{min-height:120px;resize:vertical}
   .h1{font-size:34px}
   .menu{display:none}
   .actions{gap:8px}
-}
-/* Alinha mídia (Instagram + vídeo) com mesmo tamanho */
-.media-wrap{
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: 9 / 16;     /* padrão Reels */
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-  display: flex;
-  align-items: stretch;
-}
-
-/* ===== MÍDIA 9:16 (VÍDEO / IMG / INSTAGRAM) ===== */
-.media-wrap{
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: 9 / 16;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-  position: relative;   /* ESSENCIAL */
-}
-
-.media-wrap iframe,
-.media-wrap video,
-.media-wrap img{
-  width: 100%;
-  height: 100%;
-  min-height: 100%;     /* ESSENCIAL */
-  border: 0;
-  display: block;
-  object-fit: cover;
-}
-
-/* Instagram embed ocupando o box */
-.ig-embed{
-  width: 100%;
-  height: 100%;
-}
-
-/* ===== GRID DO PORTFÓLIO (RESPONSIVA) ===== */
-.portfolio-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-@media (min-width: 900px){
-  .portfolio-grid{
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
-}
-/* ===== HEADER MOBILE (arruma logo + botões) ===== */
-@media (max-width: 900px){
 
   .nav{
     flex-direction: column;
@@ -242,26 +196,14 @@ textarea{min-height:120px;resize:vertical}
     gap: 10px;
     padding: 12px 0;
   }
-
   .brand{
     width: 100%;
     justify-content: flex-start;
     gap: 10px;
   }
-
-  .brand img{
-    height: 30px;
-  }
-
-  .brand .name{
-    font-size: 16px;
-    line-height: 1.1;
-  }
-
-  .brand .small{
-    font-size: 12px;
-    opacity: .85;
-  }
+  .brand img{ height: 30px; }
+  .brand .name{ font-size: 16px; line-height: 1.1; }
+  .brand .small{ font-size: 12px; opacity: .85; }
 
   .actions{
     width: 100%;
@@ -269,7 +211,6 @@ textarea{min-height:120px;resize:vertical}
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
   .actions .btn{
     width: 100%;
     padding: 12px 10px;
@@ -277,78 +218,9 @@ textarea{min-height:120px;resize:vertical}
     font-size: 14px;
     white-space: nowrap;
   }
-
-  .actions .btn.primary{
-    justify-content: center;
-  }
 }
 
-.footer-criersite {
-  margin-top: 80px;
-  padding: 60px 20px 40px;
-  background: radial-gradient(circle at top, rgba(20,184,166,0.15), transparent 60%), #020617;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  text-align: center;
-  animation: fadeInFooter 1.2s ease forwards;
-}
-
-.footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.footer-logo {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #14b8a6, #22c55e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 12px;
-}
-
-.footer-desc {
-  color: #94a3b8;
-  font-size: 15px;
-  margin-bottom: 24px;
-}
-
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 28px;
-}
-
-.footer-social a {
-  color: #cbd5f5;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: #14b8a6;
-  transform: translateY(-2px);
-}
-
-.footer-legal {
-  color: #64748b;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-@keyframes fadeInFooter {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* WhatsApp Floating Button */
+/* ===== WhatsApp Floating Button ===== */
 .wa-float{
   position: fixed;
   right: 18px;
@@ -373,12 +245,10 @@ textarea{min-height:120px;resize:vertical}
   opacity: 0;
   animation: waIn .7s ease .3s forwards;
 }
-
 .wa-float:hover{
   transform: translateY(-2px) scale(1.02);
   border-color: rgba(20,184,166,.35);
 }
-
 .wa-dot{
   width: 10px;
   height: 10px;
@@ -387,18 +257,14 @@ textarea{min-height:120px;resize:vertical}
   box-shadow: 0 0 0 0 rgba(34,197,94,.45);
   animation: waPulse 1.4s infinite;
 }
-
 @keyframes waPulse{
   0% { box-shadow: 0 0 0 0 rgba(34,197,94,.45); }
   70% { box-shadow: 0 0 0 12px rgba(34,197,94,0); }
   100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
 }
-
 @keyframes waIn{
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Mobile tweak */
 @media (max-width: 420px){
   .wa-float{
     right: 12px;
@@ -407,104 +273,11 @@ textarea{min-height:120px;resize:vertical}
     font-size: 13px;
   }
 }
-/* ===== PORTFÓLIO HOME ===== */
-.portfolio-home {
-  padding: 80px 0;
-  background: #070f1f;
-  text-align: center;
-}
 
-.section-title {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  color: #9aa4b2;
-  max-width: 520px;
-  margin: 0 auto 40px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.video-card video {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.4);
-}
-
-.portfolio-cta {
-  margin-top: 40px;
-}
-/* ===== CORREÇÃO GLOBAL DE VÍDEOS ===== */
-
-video,
-.video-card video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-}
-
-/* mantém todos em formato vertical igual */
-.video-card {
-  aspect-ratio: 9 / 16;
-  background: #000;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-/* grid correto */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-/* PORTFÓLIO — cards alinhados e mídia 9:16 */
-.portfolio-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.media-wrap{
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
-}
-
-.media-wrap img,
-.media-wrap video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* texto e botão alinhados */
-.meta{ opacity: .9; line-height: 1.35; }
-
-/* responsivo */
-@media (max-width: 980px){
-  .portfolio-grid{ grid-template-columns: 1fr; }
-}
-/* ===== PORTFÓLIO ===== */
-
+/* =========================================================
+   PORTFÓLIO (ÚNICO / DEFINITIVO) — SEM CONFLITOS
+   Use no HTML: class="portfolio-card card" nos cards do portfólio
+   ========================================================= */
 .portfolio-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -518,7 +291,7 @@ video,
   gap: 10px;
 }
 
-.media-wrap{
+.portfolio-card .media-wrap{
   width: 100%;
   aspect-ratio: 9 / 16;
   border-radius: 18px;
@@ -526,21 +299,21 @@ video,
   background: #000;
 }
 
-.media-wrap img,
-.media-wrap video{
+.portfolio-card .media-wrap img,
+.portfolio-card .media-wrap video,
+.portfolio-card .media-wrap iframe{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border: 0;
   display: block;
+  object-fit: cover;
 }
 
-.meta{
+.portfolio-card .meta{
   opacity: .9;
   line-height: 1.35;
 }
 
 @media (max-width: 980px){
-  .portfolio-grid{
-    grid-template-columns: 1fr;
-  }
+  .portfolio-grid{ grid-template-columns: 1fr; }
 }
