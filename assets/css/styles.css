@@ -407,3 +407,36 @@ textarea{min-height:120px;resize:vertical}
     font-size: 13px;
   }
 }
+/* ===== PORTFÓLIO HOME ===== */
+.portfolio-home {
+  padding: 80px 0;
+  background: #070f1f;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #9aa4b2;
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+.portfolio-cta {
+  margin-top: 40px;
+}
