@@ -466,3 +466,40 @@ video,
   gap: 24px;
   align-items: start;
 }
+/* PORTFÓLIO — cards alinhados e mídia 9:16 */
+.portfolio-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media-wrap{
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+}
+
+.media-wrap img,
+.media-wrap video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* texto e botão alinhados */
+.meta{ opacity: .9; line-height: 1.35; }
+
+/* responsivo */
+@media (max-width: 980px){
+  .portfolio-grid{ grid-template-columns: 1fr; }
+}
